@@ -1,11 +1,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 function Header() {
+  const [currentPage, setCurrentPage] = useState('');
+  useEffect(function () {
+    setCurrentPage(location.pathname);
+  }, []);
+
   return (
     <header>
       <Link href="/">
-        <a>
+        <a className={currentPage === '/' ? 'activeLink' : ''}>
           <div>
             <Image
               alt="Reflection logo"
@@ -20,12 +26,16 @@ function Header() {
       <nav>
         <ul>
           <Link href="/original-algorithm">
-            <a>
+            <a
+              className={
+                currentPage === '/original-algorithm' ? 'activeLink' : ''
+              }
+            >
               <li>First implementation</li>
             </a>
           </Link>
           <Link href="/source-code">
-            <a>
+            <a className={currentPage === '/source-code' ? 'activeLink' : ''}>
               <li>Source code</li>
             </a>
           </Link>
