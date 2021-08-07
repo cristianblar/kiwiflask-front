@@ -1,0 +1,26 @@
+.mainContainer {
+  background-color: var(--kiwi-purple);
+  border-radius: 20px;
+  margin: 24px auto;
+  padding: 24px;
+  width: 80%;
+}
+
+.mainContainer h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.dataContainer li {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.dataContainer span {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin-right: 4px;
+}

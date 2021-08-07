@@ -1,10 +1,11 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, Fragment } from 'react';
 import axios from 'axios';
 
 import styles from '../styles/Home.module.css';
 
 import MainForm from '@components/MainForm/MainForm';
 import Result from '@components/Result/Result';
+import Loading from '@components/Loading/Loading';
 
 const API_URL = 'https://kiwiflask-api.herokuapp.com/api/check-array';
 
@@ -86,25 +87,83 @@ export default function Home() {
   };
 
   return (
-    <main>
-      <MainForm
-        formRef={mainFormRef}
-        textError={textError}
-        handleTextError={handleTextError}
-        handleSubmit={handleSubmit}
-        handleTextPreference={{
-          textPreference,
-          textPreferenceChange: handleTextPreference,
-        }}
-      />
-      {!postStatus.callMade ? null : postStatus.loading ? (
-        <span>Loading...</span>
-      ) : (
-        <Result fetchedData={fetchedData} />
-      )}
-      {postStatus.error && (
-        <span>Something went wrong! Please, try again!</span>
-      )}
-    </main>
+    <Fragment>
+      <main className={styles.mainContainer}>
+        <MainForm
+          formRef={mainFormRef}
+          textError={textError}
+          handleTextError={handleTextError}
+          handleSubmit={handleSubmit}
+          handleTextPreference={{
+            textPreference,
+            textPreferenceChange: handleTextPreference,
+          }}
+        />
+        {!postStatus.callMade ? null : postStatus.loading ? (
+          <Loading />
+        ) : (
+          <Result fetchedData={fetchedData} />
+        )}
+        {postStatus.error && (
+          <span className={styles.errorText}>
+            Something went wrong! Please, try again!
+          </span>
+        )}
+      </main>
+      <section className={styles.explanationContainer}>
+        <h3>Algorithm Explanation 📖</h3>
+        <ol>
+          <li>
+            1️⃣ The app receives an array with at least three positive integers.
+          </li>
+          <li>
+            2️⃣ The idea is that you enter an array with a mirror! A number at
+            some part of the array that separates it.
+          </li>
+          <li>
+            3️⃣ Mirror&apos;s left side must sum the same amount as mirror&apos;s
+            right side.
+          </li>
+          <li>
+            4️⃣ The computer will establish two pointers, one for the left side,
+            and the other for the right side.
+          </li>
+          <li>
+            5️⃣ Each pointer will advance to the center of the array, taking into
+            consideration the current sum of each side until each pointer.
+          </li>
+          <li>
+            6️⃣ The algorithm will iterate <code>n - 3</code> times, and{' '}
+            <code>n</code> is the length of your array.
+          </li>
+          <li>
+            7️⃣ Why <code>n - 3?</code> Because both pointers are initialized
+            before the loop begins... And, do you remember the mirror? Well,
+            that&apos;s the third.
+          </li>
+          <li>
+            8️⃣ Big O is a notation to measure an algorithm&apos;s performance,
+            taking into consideration space and time consumption.
+          </li>
+          <li>
+            9️⃣ As you read, this algorithm is going to iterate{' '}
+            <code>n - 3</code> times... However, for big arrays, the{' '}
+            <code>3</code> doesn&apos;t produce a significant difference, so it
+            is discarded.
+          </li>
+          <li>
+            🔟 But... What about the space? Well, the algorithm only uses a few
+            variables. Doesn&apos;t matter how long your array is, the algorithm
+            will use the same space to reach the solution.
+          </li>
+          <li>
+            🌟 Concluding... the algorithm of this web app performs with a time
+            Big O of O(n) regarding time complexity... And O(1) regarding space
+            complexity. It&apos;s awesome! Isn&apos;t it?
+          </li>
+          <li></li>
+        </ol>
+      </section>
+    </Fragment>
   );
 }

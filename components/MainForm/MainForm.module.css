@@ -1,0 +1,121 @@
+.mainContainer {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.textPreference {
+  margin-bottom: 12px;
+}
+
+.textPreference label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.textPreference input {
+  background-color: var(--kiwi-grey);
+  height: 25px;
+  width: 25px;
+}
+
+.mainForm label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.slider {
+  color: var(--kiwi-blue);
+  height: 12px;
+  margin-bottom: 24px;
+  margin-right: 8px;
+  width: 60%;
+}
+
+.slider + span {
+  color: var(--kiwi-blue);
+}
+
+.numsContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+}
+
+.numSpace {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.numSpace input {
+  background-color: var(--kiwi-grey);
+  border: none;
+  border-radius: 6px;
+  color: var(--kiwi-blue);
+  height: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 4rem;
+  padding: 4px;
+  width: 80px;
+}
+
+.textArray {
+  background-color: var(--kiwi-grey);
+  border: none;
+  border-radius: 6px;
+  color: var(--kiwi-blue);
+  height: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 4rem;
+  padding: 4px;
+  width: 60%;
+  margin-bottom: 24px;
+  letter-spacing: 1rem;
+}
+
+.cleanButton,
+.submitButton {
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  height: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 8px;
+  padding: 0 12px;
+  opacity: 0.9;
+  transition: opacity 200ms;
+  will-change: opacity;
+}
+
+.cleanButton {
+  background-color: white;
+  color: black;
+}
+.cleanButton:hover {
+  opacity: 1;
+}
+
+.submitButton {
+  background-color: var(--kiwi-blue);
+  color: white;
+}
+.submitButton:hover {
+  opacity: 1;
+}
+
+.errorText {
+  color: red;
+  display: block;
+  margin-bottom: 24px;
+}

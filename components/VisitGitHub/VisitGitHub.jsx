@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import styles from './VisitGitHub.module.css';
 
 function VisitGitHub({ ghLink }) {
   return (
     <a
+      className={styles.mainContainer}
       href={ghLink}
       target="_blank"
       aria-label="GitHub Repository"

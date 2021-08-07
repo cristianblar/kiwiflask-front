@@ -1,0 +1,48 @@
+.mainContainer {
+  align-items: center;
+  background: rgb(12, 105, 242);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 105, 242, 1) 0%,
+    rgba(44, 12, 62, 1) 50%
+  );
+  border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin: 12px auto 36px;
+  padding: 24px 24px;
+  width: 90%;
+}
+
+.logoContainer {
+  align-items: center;
+  display: flex;
+}
+
+.logoContainer img {
+  border-radius: 12px;
+}
+
+.logoContainer h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.mainContainer nav ul {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainContainer nav ul li {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-left: 12px;
+}
+
+.activeLink {
+  text-decoration: underline;
+  text-decoration-color: white;
+}

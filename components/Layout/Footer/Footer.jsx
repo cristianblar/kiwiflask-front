@@ -1,8 +1,10 @@
 import { FaBriefcase, FaPaperclip, FaGithub, FaLinkedin } from 'react-icons/fa';
 
+import styles from './Footer.module.css';
+
 function Footer() {
   return (
-    <footer>
+    <footer className={styles.mainContainer}>
       <h4>Want to see more of my work?</h4>
       <nav>
         <ul>

@@ -1,0 +1,7 @@
+.codeContainer {
+  font-size: 1.1rem;
+  background-color: black;
+  color: var(--kiwi-grey);
+  padding: 18px 8px;
+  overflow-x: scroll;
+}

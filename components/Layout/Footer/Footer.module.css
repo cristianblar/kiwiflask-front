@@ -1,0 +1,31 @@
+.mainContainer {
+  background-color: black;
+  color: white;
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.mainContainer h4 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.mainContainer nav ul {
+  align-items: center;
+  display: flex;
+  font-size: 2.4rem;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.mainContainer nav ul li {
+  opacity: 0.8;
+  transition: opacity 200ms;
+  will-change: opacity;
+}
+.mainContainer nav ul li:hover {
+  opacity: 1;
+}

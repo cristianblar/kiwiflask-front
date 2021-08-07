@@ -1,8 +1,10 @@
+import styles from './Result.module.css';
+
 function Result({ fetchedData }) {
   return (
-    <section>
+    <section className={styles.mainContainer}>
       <h2>And the result is...</h2>
-      <ul>
+      <ul className={styles.dataContainer}>
         <li>
           <span>Index position of the mirror (pivot): </span>
           {fetchedData.index}

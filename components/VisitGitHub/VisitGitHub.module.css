@@ -1,0 +1,17 @@
+.mainContainer article {
+  align-items: center;
+  background-color: var(--kiwi-blue);
+  border-radius: 48px;
+  color: white;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 36px auto;
+  padding: 12px;
+  width: 75%;
+}
+
+.mainContainer article h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}

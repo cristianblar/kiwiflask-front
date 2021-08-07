@@ -1,23 +1,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+import styles from './Header.module.css';
 
 function Header() {
-  const [currentPage, setCurrentPage] = useState('');
-  useEffect(function () {
-    setCurrentPage(location.pathname);
-  }, []);
+  const router = useRouter();
 
   return (
-    <header>
+    <header className={styles.mainContainer}>
       <Link href="/">
-        <a className={currentPage === '/' ? 'activeLink' : ''}>
-          <div>
+        <a className={router.pathname == '/' ? styles.activeLink : ''}>
+          <div className={styles.logoContainer}>
             <Image
               alt="Reflection logo"
               src="/mirror.jpeg"
-              width={121}
-              height={80}
+              width={76}
+              height={50}
             />
             <h2>Reflect</h2>
           </div>
@@ -28,14 +27,20 @@ function Header() {
           <Link href="/original-algorithm">
             <a
               className={
-                currentPage === '/original-algorithm' ? 'activeLink' : ''
+                router.pathname == '/original-algorithm'
+                  ? styles.activeLink
+                  : ''
               }
             >
               <li>First implementation</li>
             </a>
           </Link>
           <Link href="/source-code">
-            <a className={currentPage === '/source-code' ? 'activeLink' : ''}>
+            <a
+              className={
+                router.pathname == '/source-code' ? styles.activeLink : ''
+              }
+            >
               <li>Source code</li>
             </a>
           </Link>
