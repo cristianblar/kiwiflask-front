@@ -1,9 +1,16 @@
-html,
-body {
-  padding: 0;
+* {
+  box-sizing: border-box;
+  list-style: none;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -11,6 +18,9 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+/* VARIABLES */
+:root {
+  --kiwi-blue: rgb(12, 105, 242);
+  --kiwi-grey: rgb(229, 233, 235);
+  --kiwi-purple: rgb(44, 12, 62);
 }
